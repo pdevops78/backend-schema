@@ -45,6 +45,8 @@ if [ "${db_type}" == 'mongo' ]; then
       echo "Environment variable is missing"
       exit 1;
   fi
+  echo mongosh my-docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile /app/rds-combined-ca-bundle.pem --username docdb --password roboshop123
+  mongosh my-docdb.cluster-cvkemucwmc9p.us-east-1.docdb.amazonaws.com:27017 --tls --tlsCAFile /app/rds-combined-ca-bundle.pem --username docdb --password roboshop123 </app/schema/catalogue.js
 fi
 
 
