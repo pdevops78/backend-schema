@@ -1,4 +1,5 @@
 FROM                         docker.io/redhat/ubi8
+COPY                         mongo.repo /etc/yum.repos.d/mongo.repo
 RUN                          dnf install mongodb-mongosh mysql git -y
 RUN                          mkdir /app
 COPY                         run.sh /app/run.sh
