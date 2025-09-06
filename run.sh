@@ -36,7 +36,7 @@ if [ "${db_name}" == 'mysql' ]; then
     echo mysql -h${DB_HOST} -u${rds_name} -p${rds_password} <schema/${component}.sql
 fi
 
-if [ "${db_name}" == 'mongo' ]; then
+if [ "${db_type}" == 'mongo' ]; then
   if [ -z "${DOCUMENTDB}" ]; then
       echo "Environment variable is missing"
       exit 1;
