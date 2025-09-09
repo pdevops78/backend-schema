@@ -18,7 +18,7 @@ if [ -z "${NEW_RELIC_LICENSE_KEY}" ]; then
   exit 1
 fi
 
-node -r newrelic /app/index.js
+node  /app/index.js
 
 git clone https://github.com/pdevops78/${project_name}-${component}
 cd ${project_name}-${component}
