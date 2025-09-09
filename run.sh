@@ -31,8 +31,10 @@ fi
 git clone https://github.com/pdevops78/${project_name}-${component}
 cd ${project_name}-${component}
 echo ${project_name}-${component}
-echo mysql -h${DB_HOST} -u${rds_name} -p${rds_password} <schema/${component}.sql
-mysql -h${DB_HOST} -u${rds_name} -p${rds_password} <schema/${component}.sql
+echo mysql -hmysql-dev.cvkemucwmc9p.us-east-1.rds.amazonaws.com -uadmin -pExpenseApp123 <schema/backend.sql
+
+ mysql -hmysql-dev.cvkemucwmc9p.us-east-1.rds.amazonaws.com -uadmin -pExpenseApp123 <schema/backend.sql
+
 
 
 
